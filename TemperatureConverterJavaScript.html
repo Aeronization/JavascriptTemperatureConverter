@@ -1,0 +1,74 @@
+<!doctype HTML>
+<html>
+
+<link rel="stylesheet" type="text/css" href="TemperatureConverterJavaScript.css"> <!--CSS Link -->
+
+
+<head>
+	<title>Temperature Converter: Fahrenheit to Celsius</title>
+	
+	<div class="main">
+		<b><h1>Temperature Converter: Fahrenheit to Celsius</h1></b>
+	</div>
+
+</head>
+
+<body>
+
+			<!--Input to type in a value equal to a temperature-->
+	<div class="main">
+	<div id="divCelsius">
+
+		<input type='number' placeholder="Enter the Temperature in Celsius" id="celsius" />
+			<input type='button' onClick='c2f( )' value = 'Convert' id="celsius1"/>
+	</div>
+	</div>
+
+	<div class="main">
+	<div id="divFahrenheit">
+		<input type='number' placeholder="Enter the Temperature in Fahrenheit" id="fahrenheit" />
+			<input type='button' onClick='f2c( )' value = 'Convert' id="fahrenheit1"/>
+	</div>
+	</div>
+
+
+<br>
+
+	<div id="Info">
+		<li>This webpage can handle all of your converting needs between Fahrenheit and Celsius.</li>
+		<li> If you have any questions, comments, or concerns you can contact me at FrielDevelopment@gmail.com</li>
+		<li>The information used to calculate the conversion is as followed. </li>
+		<li>For Celsius to Fahrenheit, (C * 1.8) + 32. </li>
+		<li>For Fahrenheit to Celsius, (F -32) * 1.8.</li>
+	</div>
+
+</body>
+
+<script>
+
+		
+	var cel = document.getElementById('celsius');
+	var fah = document.getElementById('fahrenheit');
+
+	function c2f(){
+		fah.value = (1.8 * cel.value)+32;
+		alert(cel.value + ' Celsius is equal to ' + fah.value + ' Fahrenheit');
+	}
+
+	function f2c(){
+		cel.value = (fah.value - 32) *1.8;
+		alert(fah.value + ' Fahrenheit is equal to ' + cel.value + ' Celsius');
+	
+	}
+
+</script>
+
+<div class="main3">
+<footer>
+
+		<!-- Information for the conversion of Celsius and Fahrenheit found on google-->
+	Created and Coded by Ryan Friel
+</footer>
+</div>
+
+</html>
